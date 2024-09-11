@@ -1,0 +1,6 @@
+[book]
+authors = ["Gijs Arkink"]
+language = "en"
+multilingual = false
+src = "src"
+title = "ExampleOpdracht"
