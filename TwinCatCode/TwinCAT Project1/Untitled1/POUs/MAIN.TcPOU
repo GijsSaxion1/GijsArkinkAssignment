@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{cf05c820-487e-4dd3-a2e9-a0782d731133}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+Timer : TON;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Taak 1: Productdetectie (detecteer producten op de band en start de motor).
+IF GVL.ProductGedetecteerd1 AND NOT GVL.ProductGedetecteerd2 THEN // Controleer of het eerste product gedetecteerd is en het tweede niet
+    GVL.MotorStatus := 1; // Zet de motorstatus aan (start de motor)
+END_IF
+
+// Taak 2: Als de motor aan staat moet een timer gaan lopen die de tijd opneemt hoe lang de band loopt.
+IF GVL.MotorStatus THEN
+	Timer(IN := TRUE, PT := T#30S); // Start de timer voor 30 seconden
+	IF Timer.ET > T#1S THEN // Controleer of de band langer als een seconde loopt
+		GVL.ProductGedetecteerd1 := FALSE; // Zet de sensor productgedetecteerd uit
+	END_IF
+END_IF
+
+// Taak 3: Stoppen van de band (stop de motor na het bereiken van het einddoel).
+IF GVL.ProductGedetecteerd2 AND Timer.ET > T#1S THEN // Controleer of het tweede product gedetecteerd is en de band al langer als een seconde loopt
+    IF GVL.MotorStatus THEN
+		POU(Timer.ET); // Geef de tijd wat het object er over heeft gedaan mee aan de functie
+	END_IF 
+	GVL.MotorStatus := 0; // Zet de motorstatus uit (stop de motor)
+	Timer(IN := FALSE); // Stop de timer    
+END_IF 
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="170" Count="20" />
+      <LineId Id="120" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
