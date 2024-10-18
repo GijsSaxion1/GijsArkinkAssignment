@@ -50,6 +50,11 @@
               <v n="TextDefault">"Sensor 2"</v>
               <l n="LanguageTexts" t="ArrayList" />
             </o>
+            <o>
+              <v n="TextID">"322"</v>
+              <v n="TextDefault">"Transportband snelheid m/s"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
           </l>
           <l n="Languages" t="ArrayList" />
           <v n="GuidInit">{88dce13a-a931-460a-ac32-adf57299b152}</v>
