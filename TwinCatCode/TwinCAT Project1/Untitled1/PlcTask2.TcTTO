@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Task Name="PlcTask2" Id="{9bdd5967-5343-492f-8815-aed1b0d4ad21}">
+    <!--CycleTime in micro seconds.-->
+    <CycleTime>5000</CycleTime>
+    <Priority>19</Priority>
+    <PouCall>
+      <Name>StopBeld</Name>
+    </PouCall>
+    <TaskFBGuid>{30e6c892-a844-4e90-8352-cb65677f672f}</TaskFBGuid>
+    <Fb_init>{45174680-e7aa-45d9-9126-c89495107e52}</Fb_init>
+    <Fb_exit>{82728e45-f85e-4a17-9349-66f8be603dd5}</Fb_exit>
+    <CycleUpdate>{cab9a2dc-1f12-457f-ab1c-2c5d861f7b22}</CycleUpdate>
+    <PostCycleUpdate>{63cb336d-6d11-4f7d-b8ea-a8c5c23f294b}</PostCycleUpdate>
+  </Task>
+</TcPlcObject>

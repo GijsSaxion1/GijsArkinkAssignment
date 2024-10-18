@@ -8,7 +8,7 @@ VAR_GLOBAL
 	MotorStatus : BOOL;
 	TransportBandSnelheid : REAL;
 	
-	Afstand : INT;
+	Timer : TON;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
