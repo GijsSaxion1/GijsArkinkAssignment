@@ -8,6 +8,7 @@ VAR_INPUT
 END_VAR
 VAR
 	TijdInSeconden : REAL;
+	TransportbandSnelheid : REAL;
 END_VAR
 ]]></Declaration>
     <Implementation>

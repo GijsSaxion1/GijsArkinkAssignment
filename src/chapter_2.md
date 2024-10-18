@@ -3,8 +3,8 @@
 
 @startuml
 [*] --> Wachten
-Wachten --> TimerLopen : MotorStatus = 1
-TimerLopen --> Stoppen : ProductGedetecteerd2 && Timer.ET > 1s
-Stoppen --> Wachten : MotorStatus = 0
+Wachten --> TimerLopen : Timer = True
+TimerLopen --> TimerStoppen : ProductGedetecteerd2 && Timer.ET > 1s
+TimerStoppen --> Wachten : Timer = False
 @enduml
 
