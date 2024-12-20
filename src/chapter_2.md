@@ -2,9 +2,9 @@
 ```plantuml
 
 @startuml
-[*] --> Wachten
-Wachten --> TimerLopen : Timer = True
+[*] --> Case2
+Case2 --> TimerLopen : Timer = True
 TimerLopen --> TimerStoppen : ProductGedetecteerd2 && Timer.ET > 1s
-TimerStoppen --> Wachten : Timer = False
+TimerStoppen --> Case3 : Timer = False
 @enduml
 

@@ -2,7 +2,7 @@
 ```plantuml
 
 @startuml
-[*] --> Wachten
-Wachten --> Stoppen : ProductGedetecteerd2 && Timer.ET > 1s
-Stoppen --> Wachten : MotorStatus = 0
+[*] --> Case3
+Case3 --> Stoppen : ProductGedetecteerd2 && Timer.ET > 1s
+Stoppen --> Case1 : MotorStatus = 0
 @enduml
