@@ -35,14 +35,12 @@ IF GVL.caseInput = 3 THEN // Controleer of het tweede product gedetecteerd is en
 	END_IF 
 	GVL.MotorStatus := 0; // Zet de motorstatus uit (stop de motor)
 	TimerOn := FALSE;
-	GVL.KlaarVoorVolgende := TRUE;
 END_IF ]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="185" Count="1" />
       <LineId Id="170" Count="11" />
       <LineId Id="190" Count="7" />
-      <LineId Id="208" Count="0" />
       <LineId Id="120" Count="0" />
     </LineIds>
   </POU>
