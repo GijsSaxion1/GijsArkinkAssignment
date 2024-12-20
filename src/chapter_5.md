@@ -2,7 +2,7 @@
 ```plantuml
 
 @startuml
-participant "Taak 3" as Task3
+participant "Case 3" as Task3
 participant "POU" as Function
 
 Task3 -> Function : Aanroep(Timer.ET)

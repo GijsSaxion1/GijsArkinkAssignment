@@ -3,14 +3,16 @@
 
 @startuml
 Entity Product
-participant "Taak 1" as Task1
-participant "Taak 2" as Task2
-participant "Taak 3" as Task3
+participant "Case 1" as Task1
+participant "Case 2" as Task2
+participant "Case 3" as Task3
 
-Product -> Task1 : Controleer ProductGedetecteerd1
+Product -> Task1 : Controleer Product begin band
 Task1 -> Task2 : Zet MotorStatus aan
 Task2 -> Task2 : Start Timer
-Task2 -> Task3 : Controleer ProductGedetecteerd2
+Task2 -> Task3 : Controleer Product einde band
 Task3 -> Task2 : Stop Timer
+Task2 -> Task1 : Zet MotorStatus uit
+Task1 -> Product : Controleer Nieuw product
 @enduml
 

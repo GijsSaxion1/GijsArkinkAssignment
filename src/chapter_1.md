@@ -2,7 +2,7 @@
 ```plantuml
 
 @startuml
-[*] --> Wachten
-Wachten --> MotorAan : ProductGedetecteerd1 && !ProductGedetecteerd2
-MotorAan --> Wachten : MotorStatus = 1
+[*] --> Initialisatie
+Initialisatie --> MotorAan : Product gedetecteerd aan begin
+MotorAan --> Case2 : Motor aan
 @enduml
