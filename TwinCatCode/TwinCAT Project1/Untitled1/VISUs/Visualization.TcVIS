@@ -418,7 +418,7 @@
                     </o>
                     <o>
                       <v n="Id">397264524L</v>
-                      <v n="Value">"StopBeld.Afstand"</v>
+                      <v n="Value">"MAIN.Afstand"</v>
                     </o>
                     <o>
                       <v n="Id">2597686782L</v>
@@ -1234,7 +1234,7 @@
                     </o>
                     <o>
                       <v n="Id">397264524L</v>
-                      <v n="Value">"GVL.TransportBandSnelheid"</v>
+                      <v n="Value">"MAIN.TransportBandSnelheid"</v>
                     </o>
                     <o>
                       <v n="Id">2114174855L</v>

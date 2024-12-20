@@ -12,6 +12,7 @@ END_VAR
 		GVL.ProductGedetecteerd1 := FALSE;	
 		GVL.ProductGedetecteerd2 := FALSE;
 		GVL.MotorStatus := FALSE;
+		GVL.KlaarVoorVolgende := FALSE;
 		IF GVL.ProductGedetecteerd1 AND NOT GVL.ProductGedetecteerd2 THEN
 			GVL.caseInput := 1;
 		END_IF
@@ -26,7 +27,7 @@ END_VAR
 	3: // Programma weer afsluiten.
 		IF MAIN.KlaarVoorVolgende THEN
 			GVL.caseInput := 1;
-			MAIN.KlaarVoorVolgende := FALSE;
+			GVL.KlaarVoorVolgende := FALSE;
 		END_IF
 END_CASE]]></ST>
     </Implementation>
@@ -34,6 +35,7 @@ END_CASE]]></ST>
       <LineId Id="5" Count="0" />
       <LineId Id="18" Count="0" />
       <LineId Id="28" Count="2" />
+      <LineId Id="48" Count="0" />
       <LineId Id="47" Count="0" />
       <LineId Id="33" Count="0" />
       <LineId Id="46" Count="0" />

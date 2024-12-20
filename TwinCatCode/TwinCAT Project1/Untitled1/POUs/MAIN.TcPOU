@@ -3,9 +3,10 @@
   <POU Name="MAIN" Id="{cf05c820-487e-4dd3-a2e9-a0782d731133}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	// Afstandbepaling variabelen
 	Afstand: INT;
 	TransportBandSnelheid : REAL;
-	KlaarVoorVolgende : BOOL;
+	
 	// Timers
 	Timer : TON;
 	TimerOn : BOOL := FALSE;
@@ -34,7 +35,7 @@ IF GVL.caseInput = 3 THEN // Controleer of het tweede product gedetecteerd is en
 	END_IF 
 	GVL.MotorStatus := 0; // Zet de motorstatus uit (stop de motor)
 	TimerOn := FALSE;
-	KlaarVoorVolgende := TRUE;
+	GVL.KlaarVoorVolgende := TRUE;
 END_IF ]]></ST>
     </Implementation>
     <LineIds Name="MAIN">

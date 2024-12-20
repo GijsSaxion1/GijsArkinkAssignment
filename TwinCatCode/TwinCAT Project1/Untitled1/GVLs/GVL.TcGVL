@@ -10,6 +10,7 @@ VAR_GLOBAL
 	ProductGedetecteerd1 : BOOL;	
 	ProductGedetecteerd2 : BOOL;
 	MotorStatus : BOOL;
+	KlaarVoorVolgende : BOOL;
 
 	// Timers
 	Timer : TON;
