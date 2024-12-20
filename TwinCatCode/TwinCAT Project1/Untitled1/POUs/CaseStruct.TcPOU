@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="CaseStruct" Id="{b01a3e46-c1c4-4cee-aff9-0d3865864dfe}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM CaseStruct
+VAR
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE GVL.caseInput OF 
+	0: // Initialisatie.
+		GVL.ProductGedetecteerd1 := FALSE;	
+		GVL.ProductGedetecteerd2 := FALSE;
+		GVL.MotorStatus := FALSE;
+		IF GVL.ProductGedetecteerd1 AND NOT GVL.ProductGedetecteerd2 THEN
+			GVL.caseInput := 1;
+		END_IF
+	1: // Product aan de start gedetecteerd.
+		IF GVL.MotorStatus THEN
+			GVL.caseInput := 2;
+		END_IF
+	2: // Product op het einde gedetecteerd.
+		IF GVL.ProductGedetecteerd2 AND MAIN.Timer.ET > T#1S THEN
+			GVL.caseInput := 3;
+		END_IF
+	3: // Programma weer afsluiten.
+		IF MAIN.KlaarVoorVolgende THEN
+			GVL.caseInput := 1;
+			MAIN.KlaarVoorVolgende := FALSE;
+		END_IF
+END_CASE]]></ST>
+    </Implementation>
+    <LineIds Name="CaseStruct">
+      <LineId Id="5" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="28" Count="2" />
+      <LineId Id="47" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="46" Count="0" />
+      <LineId Id="22" Count="1" />
+      <LineId Id="35" Count="1" />
+      <LineId Id="24" Count="1" />
+      <LineId Id="39" Count="1" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="44" Count="0" />
+      <LineId Id="19" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

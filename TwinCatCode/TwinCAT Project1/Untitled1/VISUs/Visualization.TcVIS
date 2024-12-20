@@ -544,7 +544,7 @@
                     </o>
                     <o>
                       <v n="Id">2134141914L</v>
-                      <v n="Value">17</v>
+                      <v n="Value">38</v>
                     </o>
                     <o>
                       <v n="Id">3729828405L</v>
@@ -575,7 +575,8 @@
                     </o>
                     <o>
                       <v n="Id">390574330L</v>
-                      <v n="Value">"Sensor 1"</v>
+                      <v n="Value">"Sensor 1
+(Begin band)"</v>
                     </o>
                     <o>
                       <v n="Id">2597686782L</v>
@@ -583,7 +584,7 @@
                     </o>
                     <o>
                       <v n="Id">823443203L</v>
-                      <v n="Value">"268"</v>
+                      <v n="Value">"529"</v>
                     </o>
                   </l>
                 </o>
@@ -701,7 +702,7 @@
                     </o>
                     <o>
                       <v n="Id">2134141914L</v>
-                      <v n="Value">17</v>
+                      <v n="Value">37</v>
                     </o>
                     <o>
                       <v n="Id">3729828405L</v>
@@ -732,7 +733,8 @@
                     </o>
                     <o>
                       <v n="Id">390574330L</v>
-                      <v n="Value">"Sensor 2"</v>
+                      <v n="Value">"Sensor 2
+(Einde band)"</v>
                     </o>
                     <o>
                       <v n="Id">2597686782L</v>
@@ -740,7 +742,7 @@
                     </o>
                     <o>
                       <v n="Id">823443203L</v>
-                      <v n="Value">"554"</v>
+                      <v n="Value">"400"</v>
                     </o>
                   </l>
                 </o>
@@ -1564,7 +1566,7 @@
             </o>
             <v n="DialogDut">{e010657f-d90f-4530-8e9c-1beb39f36331}</v>
           </o>
-          <v n="LastUsedIdForIdentifier">30</v>
+          <v n="LastUsedIdForIdentifier">33</v>
           <o n="TextDocument" t="TextDocument">
             <a n="TextLines" cet="TextLine">
               <o>
@@ -1602,12 +1604,12 @@
               <v>0</v>
               <o>
                 <v n="Width">1023</v>
-                <v n="Height">167</v>
+                <v n="Height">188</v>
               </o>
               <v>1</v>
               <o>
                 <v n="Width">1025</v>
-                <v n="Height">168</v>
+                <v n="Height">189</v>
               </o>
             </d2>
             <v n="Version">1</v>

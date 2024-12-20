@@ -5,7 +5,7 @@
     <CycleTime>5000</CycleTime>
     <Priority>19</Priority>
     <PouCall>
-      <Name>StopBeld</Name>
+      <Name>CaseStruct</Name>
     </PouCall>
     <TaskFBGuid>{30e6c892-a844-4e90-8352-cb65677f672f}</TaskFBGuid>
     <Fb_init>{45174680-e7aa-45d9-9126-c89495107e52}</Fb_init>

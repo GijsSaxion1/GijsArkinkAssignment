@@ -3,12 +3,17 @@
   <GVL Name="GVL" Id="{aa5d9f65-4fbf-4ab0-9237-d2df44e41fcb}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
+	// Case structure
+	caseInput : INT := 0;
+	
+	// Variabelen
 	ProductGedetecteerd1 : BOOL;	
 	ProductGedetecteerd2 : BOOL;
 	MotorStatus : BOOL;
-	TransportBandSnelheid : REAL;
-	
+
+	// Timers
 	Timer : TON;
+	TimerOn : BOOL := FALSE;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

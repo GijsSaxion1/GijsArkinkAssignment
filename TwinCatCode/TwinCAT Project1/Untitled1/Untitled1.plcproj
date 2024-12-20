@@ -36,7 +36,7 @@
     <Compile Include="POUs\POU.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\StopBeld.TcPOU">
+    <Compile Include="POUs\CaseStruct.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Visualization Manager.TcVMO">
