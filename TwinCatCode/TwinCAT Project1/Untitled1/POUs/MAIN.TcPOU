@@ -2,11 +2,7 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="MAIN" Id="{cf05c820-487e-4dd3-a2e9-a0782d731133}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
-VAR
-	// Afstandbepaling variabelen
-	Afstand: INT;
-	TransportBandSnelheid : REAL;
-	
+VAR	
 	// Timers
 	Timer : TON;
 	TimerOn : BOOL := FALSE;
@@ -31,7 +27,7 @@ END_IF
 // Case 3: Stoppen van de band (stop de motor na het bereiken van het einddoel).
 IF GVL.caseInput = 3 THEN // Controleer of het tweede product gedetecteerd is en de band al langer als een seconde loopt
     IF GVL.MotorStatus THEN
-		POU(Timer.ET, Afstand); // Geef de afstand en tijd wat het object er over heeft gedaan mee aan de functie
+		POU(Timer.ET); // Geef de afstand en tijd wat het object er over heeft gedaan mee aan de functie
 	END_IF 
 	GVL.MotorStatus := 0; // Zet de motorstatus uit (stop de motor)
 	TimerOn := FALSE;

@@ -1234,7 +1234,7 @@
                     </o>
                     <o>
                       <v n="Id">397264524L</v>
-                      <v n="Value">"MAIN.TransportBandSnelheid"</v>
+                      <v n="Value">"POU.Snelheid"</v>
                     </o>
                     <o>
                       <v n="Id">2114174855L</v>

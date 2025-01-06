@@ -4,20 +4,20 @@
     <Declaration><![CDATA[FUNCTION POU : BOOL
 VAR_INPUT
  Tijd : TIME;
- Afstand : INT;
 END_VAR
 VAR
+	Afstand : INT;
 	TijdInSeconden : REAL;
-	TransportbandSnelheid : REAL;
+	Snelheid : REAL;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[TijdInSeconden := TIME_TO_REAL(Tijd)/1000; // Zet de tijd om naar een REAL waarde in seconden
 
 IF Afstand = 0 THEN // Controleer of de afstand gelijk is aan 0
-    TransportBandSnelheid := 0; // Stel de transportbandsnelheid in op 0
+   Snelheid := 0; // Stel de transportbandsnelheid in op 0
 ELSE	
-    TransportBandSnelheid := Afstand / TijdInSeconden; // Bereken de snelheid van het transportband
+   Snelheid := Afstand / TijdInSeconden; // Bereken de snelheid van het transportband
 END_IF]]></ST>
     </Implementation>
     <LineIds Name="POU">
