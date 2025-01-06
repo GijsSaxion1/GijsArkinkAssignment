@@ -6,18 +6,16 @@ VAR_INPUT
  Tijd : TIME;
 END_VAR
 VAR
-	Afstand : INT;
 	TijdInSeconden : REAL;
-	Snelheid : REAL;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[TijdInSeconden := TIME_TO_REAL(Tijd)/1000; // Zet de tijd om naar een REAL waarde in seconden
 
-IF Afstand = 0 THEN // Controleer of de afstand gelijk is aan 0
-   Snelheid := 0; // Stel de transportbandsnelheid in op 0
+IF GVL.Afstand = 0 THEN // Controleer of de afstand gelijk is aan 0
+   GVL.Snelheid := 0; // Stel de transportbandsnelheid in op 0
 ELSE	
-   Snelheid := Afstand / TijdInSeconden; // Bereken de snelheid van het transportband
+   GVL.Snelheid := GVL.Afstand / TijdInSeconden; // Bereken de snelheid van het transportband
 END_IF]]></ST>
     </Implementation>
     <LineIds Name="POU">

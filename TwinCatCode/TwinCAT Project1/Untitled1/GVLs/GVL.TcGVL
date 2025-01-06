@@ -10,6 +10,8 @@ VAR_GLOBAL
 	ProductGedetecteerd1 : BOOL;	
 	ProductGedetecteerd2 : BOOL;
 	MotorStatus : BOOL;
+	Afstand : INT;
+	Snelheid : REAL;
 
 	// Timers
 	Timer : TON;
