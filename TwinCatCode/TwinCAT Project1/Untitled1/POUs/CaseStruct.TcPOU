@@ -3,15 +3,18 @@
   <POU Name="CaseStruct" Id="{b01a3e46-c1c4-4cee-aff9-0d3865864dfe}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM CaseStruct
 VAR
-
+	InitDone : BOOL := TRUE; 
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[CASE GVL.caseInput OF 
 	0: // Initialisatie.
+		IF InitDone THEN
 		GVL.ProductGedetecteerd1 := FALSE;	
 		GVL.ProductGedetecteerd2 := FALSE;
 		GVL.MotorStatus := FALSE;
+		InitDone := FALSE;
+		END_IF
 		IF GVL.ProductGedetecteerd1 AND NOT GVL.ProductGedetecteerd2 THEN
 			GVL.caseInput := 1;
 		END_IF
@@ -32,7 +35,10 @@ END_CASE]]></ST>
     <LineIds Name="CaseStruct">
       <LineId Id="5" Count="0" />
       <LineId Id="18" Count="0" />
+      <LineId Id="55" Count="0" />
       <LineId Id="28" Count="2" />
+      <LineId Id="58" Count="0" />
+      <LineId Id="56" Count="0" />
       <LineId Id="47" Count="0" />
       <LineId Id="33" Count="0" />
       <LineId Id="46" Count="0" />
